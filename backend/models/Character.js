@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const schema = new mongoose.Schema({
-    name: "string"
+  name: "string",
 });
 
-const character = mongoose.model("Character", { schema });
+const character = mongoose.model("Character", schema);
 
 module.exports = character;
