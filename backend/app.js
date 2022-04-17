@@ -4,6 +4,10 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+const mongoose = require('mongoose');
+
+const db = mongoose.connect(process.env.DB_CONNECTION_URI);
+db.then(()=>console.log('DB connected !'))
 
 var usersRouter = require("./routes/userRouter");
 var charactersRouter = require("./routes/characterRouter");
