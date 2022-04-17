@@ -87,6 +87,21 @@ const combatSchema = new mongoose.Schema({
     mental_attack: Number,
 });
 
+const weaponSchema = new mongoose.Schema({
+	name : {
+		type : String
+	},
+	ranged_attack : {
+		type : String
+	},
+	damage_score : {
+		type : String
+	},
+	special : {
+		type : String
+	}
+});
+
 const descriptionSchema = new mongoose.Schema({
     gender: {
         type: String,
@@ -128,6 +143,7 @@ const schema = new mongoose.Schema({
     vitality: [vitalitySchema],
     luck_points: [luckSchema],
     combat: [combatSchema],
+	weapons : [weaponSchema],
     defense: {
         armor: {
             type: Number,
