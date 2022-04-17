@@ -87,6 +87,21 @@ const combatSchema = new mongoose.Schema({
     mental_attack: Number,
 });
 
+const descriptionSchema = new mongoose.Schema({
+    gender: {
+        type: String,
+        required: true,
+    },
+    age: {
+        type: Number,
+        required: true,
+    },
+    height: {
+        type: String,
+    },
+    languages: [String],
+});
+
 const schema = new mongoose.Schema({
     name: {
         type: String,
@@ -108,6 +123,7 @@ const schema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    description: [descriptionSchema],
     characteristics: [characteristicSchema],
     vitality: [vitalitySchema],
     luck_points: [luckSchema],
