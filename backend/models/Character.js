@@ -1,42 +1,72 @@
 const mongoose = require("mongoose");
 
 const characteristicSchema = new mongoose.Schema({
-	strength : {
-		type : Number,
-		default : 0,
-		min : 1,
-		max : 20
-	},
-	dexterity : {
-		type : Number,
-		default : 0,
-		min : 1,
-		max : 20
-	},
-	constitution : {
-		type : Number,
-		default : 0,
-		min : 1,
-		max : 20
-	},
-	intelligence : {
-		type : Number,
-		default : 0,
-		min : 1,
-		max : 20
-	},
-	perception : {
-		type : Number,
-		default : 0,
-		min : 1,
-		max : 20
-	},
-	charisma : {
-		type : Number,
-		default : 0,
-		min : 1,
-		max : 20
-	},
+    strength: {
+        score: {
+            type: Number,
+            min: 0,
+            max: 20,
+            default: 0,
+        },
+        mod: {
+            type: String,
+        },
+    },
+    dexterity: {
+        score: {
+            type: Number,
+            min: 0,
+            max: 20,
+            default: 0,
+        },
+        mod: {
+            type: String,
+        },
+    },
+    constitution: {
+        score: {
+            type: Number,
+            min: 0,
+            max: 20,
+            default: 0,
+        },
+        mod: {
+            type: String,
+        },
+    },
+    intelligence: {
+        score: {
+            type: Number,
+            min: 0,
+            max: 20,
+            default: 0,
+        },
+        mod: {
+            type: String,
+        },
+    },
+    perception: {
+        score: {
+            type: Number,
+            min: 0,
+            max: 20,
+            default: 0,
+        },
+        mod: {
+            type: String,
+        },
+    },
+    charisma: {
+        score: {
+            type: Number,
+            min: 0,
+            max: 20,
+            default: 0,
+        },
+        mod: {
+            type: String,
+        },
+    },
 });
 
 const vitalitySchema = new mongoose.Schema({
@@ -74,20 +104,20 @@ const schema = new mongoose.Schema({
         type: String,
         required: true,
     },
-	living_level : {
-		type : String,
-		required : true
-	},
-	characteristics : [characteristicSchema],
+    living_level: {
+        type: String,
+        required: true,
+    },
+    characteristics: [characteristicSchema],
     vitality: [vitalitySchema],
     luck_points: [luckSchema],
     combat: [combatSchema],
-	defense : {
-		armor : {
-			type : Number,
-			default : 0
-		}
-	}
+    defense: {
+        armor: {
+            type: Number,
+            default: 0,
+        },
+    },
 });
 
 const character = mongoose.model("Character", schema);
