@@ -117,6 +117,15 @@ const descriptionSchema = new mongoose.Schema({
     languages: [String],
 });
 
+const equipmentSchema = new mongoose.Schema({
+	object : {
+		type : String
+	},
+	equiped : {
+		type : Boolean
+	}
+})
+
 const schema = new mongoose.Schema({
     name: {
         type: String,
@@ -144,6 +153,7 @@ const schema = new mongoose.Schema({
     luck_points: [luckSchema],
     combat: [combatSchema],
 	weapons : [weaponSchema],
+	equipment : [equipmentSchema],
     defense: {
         armor: {
             type: Number,
