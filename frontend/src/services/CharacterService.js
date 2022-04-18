@@ -13,5 +13,8 @@ const apiClient = axios.create({
 export default {
     getCharacters() {
       return apiClient.get('/character')
+    },
+    getCharacter(character_id){
+      return apiClient.get('/character/' + character_id)
     }
   }
