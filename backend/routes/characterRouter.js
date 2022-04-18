@@ -13,7 +13,7 @@ router.get("/", async (req, res, next) => {
 /**
  * Afficher tous les personnages d'un joueur
  */
-router.get("/:user_id", async (req, res) => {
+router.get("/user/:user_id", async (req, res) => {
     const user_id = req.params.user_id;
 
     try {
