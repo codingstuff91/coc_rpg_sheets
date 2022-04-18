@@ -2,7 +2,16 @@
     <div class="character_card">
         <h2>{{ character.name }}</h2>
         <p class="my-4">{{ character.profile }}</p>
-        <el-button type="info" round><router-link to="/">Consulter</router-link></el-button>
+        <el-button type="info" round>
+            <router-link
+                :to="{
+                    name: 'character.show',
+                    params: { character_id: character._id },
+                }"
+            >
+                Consulter
+            </router-link></el-button
+        >
     </div>
 </template>
 
@@ -10,7 +19,7 @@
 export default {
     props: {
         character: {
-            type: Array,
+            type: Object,
         },
     },
 };
@@ -23,7 +32,7 @@ export default {
     box-sizing: border-box;
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
 }
@@ -35,7 +44,7 @@ a{
     border-radius: 10px;
 }
 
-.my-4{
+.my-4 {
     margin: 1.2em;
 }
 </style>
