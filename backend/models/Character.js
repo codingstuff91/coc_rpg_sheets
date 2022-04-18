@@ -127,6 +127,9 @@ const equipmentSchema = new mongoose.Schema({
 })
 
 const schema = new mongoose.Schema({
+    user : {
+        type : mongoose.ObjectId
+    },
     name: {
         type: String,
         required: true,
@@ -152,8 +155,8 @@ const schema = new mongoose.Schema({
     vitality: [vitalitySchema],
     luck_points: [luckSchema],
     combat: [combatSchema],
-	weapons : [weaponSchema],
-	equipment : [equipmentSchema],
+	  weapons : [weaponSchema],
+	  equipment : [equipmentSchema],
     defense: {
         armor: {
             type: Number,
