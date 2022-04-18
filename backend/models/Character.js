@@ -127,6 +127,9 @@ const equipmentSchema = new mongoose.Schema({
 })
 
 const schema = new mongoose.Schema({
+    user : {
+        type : mongoose.ObjectId
+    },
     name: {
         type: String,
         required: true,
