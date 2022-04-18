@@ -1,11 +1,9 @@
 <template>
-    <el-container>
-        <div class="character_card">
-            <h2>{{ character.name }}</h2>
-            <p>{{ character.profile }}</p>
-            <el-button type="info" round>Consulter</el-button>
-        </div>
-    </el-container>
+    <div class="character_card">
+        <h2>{{ character.name }}</h2>
+        <p class="my-4">{{ character.profile }}</p>
+        <el-button type="info" round><router-link to="/">Consulter</router-link></el-button>
+    </div>
 </template>
 
 <script>
@@ -25,10 +23,19 @@ export default {
     box-sizing: border-box;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
 .character_card {
     border: 2px solid red;
     margin: 0 30px;
-    padding : 20px;
-    border-radius : 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.my-4{
+    margin: 1.2em;
 }
 </style>
