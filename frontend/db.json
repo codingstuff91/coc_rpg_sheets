@@ -1,16 +1,64 @@
 {
-    "movies": [
+    "characters": [
       {
-        "id": 5928101,
-        "title": "Cat Cabaret",
-        "description": "Yay felines!",
-        "year" : 2018
-      },
-      {
-        "id": 8419988,
-        "title": "Kitty Cluster",
-        "description": "Yay cats!",
-        "year" : 2017
+        "id": 1,
+        "userName": "John Doe",
+        "level": 3,
+        "lifeDice": "d6",
+        "description":{
+          "name": "Thomas A. Anderson",
+          "gender": "male",
+          "age":  "unknown", 
+          "height": "1m83",
+          "weight": "80kg",
+          "languages": "English"
+        },
+        "characteristics":{
+          "STR":{
+            "score": 3, 
+            "mod": ""
+          },
+          "DEX": {
+            "score": 5,
+            "mod": ""
+          },
+          "CON":{
+            "score": 2, 
+            "mod": ""
+          },
+        "INT":{
+          "score": 14, 
+          "mod": ""
+          },
+          "PER":{
+            "score": 16, 
+            "mod": ""
+          },
+          "CHA": {
+            "score": 6, 
+            "mod": ""
+          }
+        },
+        "Attack": {
+          "contact": "-2",
+          "distance": "-1",
+          "magic": "+3"
+        },
+        "weapon": {
+          "type": "",
+          "DMG": 2
+        },
+        "health": {
+          "HP": 5,
+          "HpLeft": "",
+          "Wounds": ""
+        },
+        "defense": 3,
+        "mana": {
+          "PC": 6,
+          "madnessPoints": "",
+          "PcLeft": ""
+        }
       }
     ]
 }
