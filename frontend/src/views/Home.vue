@@ -51,18 +51,8 @@ export default {
       password: "",
     });
 
-    function switchToLogin() {
-      mode.value = "login";
-    }
-
-    function switchToSignUp() {
-      mode.value = "signup";
-    }
-
     return {
       formLabelAlign,
-      switchToLogin,
-      switchToSignUp,
       mode,
     };
   },
